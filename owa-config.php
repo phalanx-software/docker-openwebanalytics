@@ -99,3 +99,9 @@ define('OWA_CACHE_OBJECTS', getenv('OWA_CACHE_OBJECTS') ?: true);
 
 define('OWA_CONFIGURATION_ID', getenv('OWA_CONFIGURATION_ID') ?: '1');
 
+$this->set('base', 'mailer-host', getenv('OWA_MAILER_HOST'));   
+$this->set('base', 'mailer-port', getenv('OWA_MAILER_PORT'));   
+$this->set('base', 'mailer-use-smtp', (getenv('OWA_MAILER_USE_SMTP') ?: 'true') === 'true');   
+$this->set('base', 'mailer-smtpAuth', (getenv('OWA_MAILER_SMTP_AUTH') ?: 'true') === 'true');   
+$this->set('base', 'mailer-username', getenv('OWA_MAILER_USERNAME'));   
+$this->set('base', 'mailer-password', getenv('OWA_MAILER_PASSWORD'));  
